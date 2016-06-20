@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Weather</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="search-block clearfix">
+		<input type="text" id="input" class="search-field" placeholder="Enter city name">
+		<button type="button" id="button" class="search-btn">Search</button>
+	</div>
+	
+	<div class="weather-wrapper hide">
+		<div class="weather-wrapper-bg"></div>
+		<div class="weather-top">
+			<div class="weather-temperature"></div>
+			<div class="with-img-block">
+				<img src="" class="weather-icon" alt="Weather Icon" />
+				<div class="weather-description"></div>
+				<div class="weather-place"></div>
+			</div>
+		</div>
+		<div class="weather-bot">
+			<ul class="simple-list clearfix">
+				<li class="simple-list-item">
+					<span class="more-weather-icon">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAdCAYAAABIWle8AAAChElEQVRIS52VW6iOaRTHf7+LcUMNcsgpZwmlmJqmKWU2OWwhGuVUTjcuZGaacTdccGNyKBdunC6IcorkEBMXJCUSRU4JyWm7Ia5oaW3vt3vj+/b+Pqvevvd9v/X+nvU867/Wkg4sIn4ElgI71PftuVsH7BgwCzis/v7dsIiYDpwsAaaoZ2sBa0YWET8Az4CewEFgHvAcGKB+qgZsD/Yf8A9wXJ0dEaeBqcB6dW3dsIgYAjwsPhikPo6IYcD94t1A9cnXwKqRRcT/QBOwQf238lFEbATWAKfU5g5hETEROA+0AH3UjyVYJ+AVkHL5Vb1cBn4TWUQ8AIYCC9QDX68eEUuAPcAddVRNWEQsAvYCt9XRtSQQEXl2eYbz1EMVv7bIIiLvXwC9gN/UC+3ApgBnUjpq/2qw5cBO4Ir6Sx2VcQ0YByxW96V/a2RFVE+BfsAE9WIdsMx2Zv2RmlJqg80BjgDX1fEdgUrZvQWMAWaoJyuRXcpUA3PVow3A5gP7U0pqkyVlp3761qq7agtEROouk9YNGJSwVHQqe7P6d71Rlba6DVgF/JGwc8Ckeg++iogrFXM6YS8LbfVQ33xHZL2LrT5N2FugC9BVzfuGLCK6AxlES8LuACOBIeqjhkhfNDoCuAvcTFiqd2Feaqa5ISsV/u6EzcxuClxTf2qI9CWyG8BYYFrCUrjZVQcDK9Rd9QIjYiWwPTuwOqJSAZX0JqdZPdURsLSjdG1tlOUWVBFv/rkO2KR+qKKrzHwOmspQ+Uvd2lboJTX/CWwpnt8BuzNLRQvPkZdnswzoXPisVrMCWq1a2/65WDUHcC07UYy8q2WH9uZmam8yMBzoAbwG7gHn1Pz9xj4DfNsH3DUoe0AAAAAASUVORK5CYII=" alt="Humidity Icon">
+					</span>
+					Humidity
+					<strong class="weather-humidity"></strong>
+				</li>
+				<li class="simple-list-item">
+					<span class="more-weather-icon">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAATCAYAAAAao7T0AAABzklEQVRIS8WVP0hWURjGf4+WWlJKBbVVgqSLf4YIhKy1ojkHocQ5p2pxECQDdXQQHISPQKeghlwtWqKWlqJFbAuxBq1BU3nilfPFp3wGN6TzwuVyL5xzfuc5z3NekaFsnwLmgI/AI0k7gaEMLNg+DTwDrgHfgDZJ37PAlAWw3QSsAstAe1aYgLLdCXwA7meHSUAbwPs9MLZngDvANnAEWAcuAreB2dhIeopYrRaYlDR20CDbsd7ifpgB4CqwBnwFfkiatn0CGAaagSVgq4D564AXkj5Xg7H9IGCBGwcek+0e4Gg4PcE9l7Rhuws4WUChUPMMcLYCJpQIyFvpGZE0WhXGdjfwFqgBNoH6UEbShO1PQGv6X+S4/oQoWaABWAEeSnr613vGdp2kX8lgkhQ73C3be77/hajaGNkum/N4hXHHJD2x/Qq4lFRoTNL+TJ4J1YpWbCjGRXpKkh5XThAwHUB/Wiiu5TiSBUkLtsO054BdhQ6pwvwx513gnaQr5Xmz3TO2W1IypyQNZetNFd4bj0YJHIukZlMmBeFC6kvXJb3ODXMe+AL0SnqTG2Ye6IvwSNr67zC2I62XgXvAYLwllbIY2PZN4GVqJwNlkID5DVRKpDmCeV+2AAAAAElFTkSuQmCC" alt="Wind speed Icon">
+					</span>
+					Wind speed
+					<strong class="weather-wind-speed"></strong>
+				</li>
+				<li class="simple-list-item">
+					<span class="more-weather-icon">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAfCAYAAABplKSyAAACuklEQVRYR+WXS4iOYRTHf3+ZiMgCWVnISiEj4zYSC0q5LNyKxoaNjZXLZhjEgpWdsCEKY4FIkiG33C9JNpSkCGFDyeWvo/ed3pn5Lu/7fit5Nt+3eM45v/ec8/zP84gGlu3RwH5gvaRXZV2prGHY2W4B7gCtkm6W9dUoxETgMTBF0v3/GqIZeABMkxRlKbV6lMP2eElP83qyPQF4AjRLelTArkecbgjb8f83cEXS3DwObfcHxgAvJf3KadMFzAH6SXLY9M5EK3AdOCtpcR6nRfbYPg2E31mSbqS2fU6H7UnAQ6BT0vIiQWrttX0SWFapdBWPqO204U5JCsMey3YTMB+YDIwC3ibgFyX9qLC/E1harXeq6oTtmcBYSYdTp7Yj4D4gzdB34DMwDBiY7Isv3iDpXcauLembioKWW6xsh6MA+gJsBU5Iep8JNBJYAexIoNZIOpKnnLkgbG8E9gA7JQVAzWU7QNqBTZL21ttfF8J2dHN09TpJh+o5zGRmLXAQWCLpTC27mhAZ7TgmaXVegAzIUWBVVhMq+agHsQ3okFQ3Y9UAbYcgbZfUUW1PPYhviXCtLJqFTDaOA4skDSoMkUhynPmpku42AJHeOZok/axYDttDgeFABPyr5cnvDCDOfOjF67IQQNy+Qh9CW25lRkVUIUTvo2xfBnINrAZAapl2BcQ4YEQmC2EQlJG66InB0d0NAMRk/gpET8TUTbOdxvlQuusbgOpj+u9D2I4y3gN2SzpQNjulM2E7eiVG+JAk+AJJF8qAlIKwHY0a0zSO8CcgrnZbgNmSrhUFKQxhewDwAnguaZ7tuKYtBKYD54EWSVGi3KsMRBy1Nknx/ItXWDx62qMUtuP29EbS7dwEvS+6RQwzsyHeGzHkSvVDKhZlYnfb2H4GbJZ0rqyjwuXoHcj2VWCXpEtlIf4AH88FG0lDQ1YAAAAASUVORK5CYII=" alt="Sunrise Icon">
+					</span>
+					Sunrise
+					<strong class="weather-sunrise"></strong>
+				</li>
+				<li class="simple-list-item">
+					<span class="more-weather-icon">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAfCAYAAABplKSyAAACvklEQVRYR+WXS4iOYRTHf39MRMkCKWUhK4WMa4wFJQtiFgZFbNjYWLEzxqUUKwtFLBCFsXApIsbCpYx7FlYkG9fCAgnz15neV+/MfJf3fT87z+b7Fuec5/ecc57/c17RwLI9ATgEbJb0qmwolXUMP9uzgXtAi6Q7ZWM1CjENeALMkvTgv4ZoBh4CcyVFWUqtPuWwPUXSs7yRbE8FngLNkh4X8Ouzz18I2/G/B7gpaVGegLaHABOBF5J+5/TpAhYCgyQ5fPpnogW4BVyUtCJP0CI2ts8DEXeBpNup74DbYXs68AjolLSqyCa1bG2fBdoqla7iFbWdNtw5SeHYZ9luApYAM4BxwJsE/KqknxXsO4GV1Xqnqk7Yng9MknQ8DWo7NjwApBn6AXwCRgHDErs48RZJbzN+65O+qShoucXKdgQKoM9AO3BG0vvMRmOB1cCuBGqDpBN5ypkLwvZWYB+wW1IA1Fy2A2Q7sE3S/nr2dSFsRzdHV2+SdLRewExmNgJHgFZJF2r51YTIaMcpSevyAmRATgJrs5pQKUY9iB1Ah6S6GasGaDsEaaekjmo29SC+JcK1pmgWMtk4DSyXNLwwRCLJcefnSOpuACKdOZok/apYDtsjgdFAbNir5cnvPCDufOjF67IQQExfoQ+hLXczT0VUIUTvo2zfAHI9WA2A1HLtCojJwJhMFsIhKCN10RMjorsbAIiX+SsQPRGvbprtdJ8Ppbu+AagBrg1DJA3cIylOXGr9C4jrwF5J0Vul1r+AeJ68EZdKEfSfrMoEsR0DbqjqlTL+aXcW8rUdt6VN0rFeQbHje6Nd0mXby4B3ku4XCVq4HLZjeHkJdEtqtR0CtBSYCVwrM/4XhkhOPxT4AhwGYrr6ngw6iyVFoxZapSASkBjpYrYM6R2cZ26oRlYaIgEZD0RP7JF0sNDxM8Z/AAn8Cht4VYUvAAAAAElFTkSuQmCC" alt="Sunset Icon">
+					</span>
+					Sunset
+					<strong class="weather-sunset"></strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Connecting jQuery library from google -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- If google unavailable - connect local copy of jQuery -->
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+	<script src="js/weather.js"></script>
+	
+	<script>
+
+		$(function() {
+
+			$('body').on('click', '#button', function(e){
+				var thisCity = $('#input').val();
+
+		  	$('.weather-temperature').weather({
+					key: 'c08529676dea64c5594ba6830363da41',
+					city: thisCity,
+					descriptionTarget: '.weather-description',
+					windSpeedTarget: '.weather-wind-speed',
+					humidityTarget: '.weather-humidity',
+					sunriseTarget: '.weather-sunrise',
+					sunsetTarget: '.weather-sunset',
+					placeTarget: '.weather-place',
+					iconTarget: '.weather-icon',
+					customIcons: 'img/icons/weather/',
+					success: function() {
+						$('.weather-wrapper').show();
+					},
+					error: function(message) {
+						console.log(message);
+					}
+				});
+			});
+		
+		});
+	
+	</script>
+
+</body>
+	
+</html>
